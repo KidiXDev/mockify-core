@@ -239,7 +239,7 @@ export function RuleEditor({
               setFormData({ ...formData, description: e.target.value })
             }
             placeholder="e.g. Returns mock user data for testing purposes"
-            className="bg-background/50 border-border/50 focus:border-primary/50 min-h-[60px] resize-none"
+            className="bg-background/50 border-border/50 focus:border-primary/50 min-h-15 resize-none"
             rows={2}
           />
         </div>

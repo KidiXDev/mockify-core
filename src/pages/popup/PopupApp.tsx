@@ -50,14 +50,14 @@ export function PopupApp({ headerExtra, footerExtra }: PopupAppProps) {
 
   if (loading) {
     return (
-      <div className="min-w-[280px] min-h-[160px] bg-background p-5 flex items-center justify-center">
+      <div className="min-w-70 min-h-40 bg-background p-5 flex items-center justify-center">
         <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
 
   return (
-    <div className="min-w-[280px] bg-background p-5 text-foreground border border-border shadow-xl">
+    <div className="min-w-70 bg-background p-5 text-foreground border border-border shadow-xl">
       <div className="mb-5">
         <div className="flex items-center gap-3 mb-4">
           <img src="/logo.png" alt="Mockify" className="w-8 h-8" />

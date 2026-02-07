@@ -65,7 +65,7 @@ export function Select({
       <Popover
         open={isOpen}
         onOpenChange={setIsOpen}
-        className="max-h-[300px] overflow-y-auto custom-scrollbar"
+        className="max-h-75 overflow-y-auto custom-scrollbar"
         trigger={
           <button
             type="button"
@@ -79,7 +79,7 @@ export function Select({
           </button>
         }
       >
-        <div className="p-1 min-w-[200px]">{children}</div>
+        <div className="p-1 min-w-50">{children}</div>
       </Popover>
     </SelectContext.Provider>
   );
