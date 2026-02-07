@@ -14,9 +14,11 @@ export interface PopupAppProps {
   footerExtra?: React.ReactNode;
   /** Override the version label */
   version?: string;
+  /** Edition label (e.g., "Community Edition", "Pro"). If undefined, no label is shown. */
+  edition?: string;
 }
 
-export function PopupApp({ headerExtra, footerExtra }: PopupAppProps) {
+export function PopupApp({ headerExtra, footerExtra, edition }: PopupAppProps) {
   const {
     profiles,
     activeProfileId,
@@ -61,9 +63,16 @@ export function PopupApp({ headerExtra, footerExtra }: PopupAppProps) {
       <div className="mb-5">
         <div className="flex items-center gap-3 mb-4">
           <img src="/logo.png" alt="Mockify" className="w-8 h-8" />
-          <h1 className="text-lg font-semibold text-foreground tracking-tight">
-            Mockify
-          </h1>
+          <div className="flex-1">
+            <h1 className="text-lg font-semibold text-foreground tracking-tight">
+              Mockify
+            </h1>
+            {edition && (
+              <span className="text-[9px] font-bold text-muted-foreground/50 uppercase tracking-wider">
+                {edition}
+              </span>
+            )}
+          </div>
         </div>
 
         {headerExtra}

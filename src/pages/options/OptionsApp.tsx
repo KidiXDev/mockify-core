@@ -48,6 +48,8 @@ export interface OptionsAppProps {
   title?: string;
   /** GitHub URL. Pass `null` to hide the link. */
   githubUrl?: string | null;
+  /** Edition label (e.g., "Community Edition", "Pro"). If undefined, no label is shown. */
+  edition?: string;
 }
 
 export function OptionsApp({
@@ -57,6 +59,7 @@ export function OptionsApp({
   logoSrc = "/logo.png",
   title = "Mockify",
   githubUrl = "https://github.com/kidixdev/mockify",
+  edition,
 }: OptionsAppProps) {
   const { confirm } = useAlert();
   const {
@@ -307,6 +310,11 @@ export function OptionsApp({
               <h1 className="text-xl font-bold tracking-tight text-foreground">
                 {title}
               </h1>
+              {edition && (
+                <span className="text-[9px] font-bold text-muted-foreground/50 uppercase tracking-wider">
+                  {edition}
+                </span>
+              )}
             </div>
           </div>
         </div>
