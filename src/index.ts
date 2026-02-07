@@ -61,7 +61,7 @@ export { PopupApp, type PopupAppProps } from "./pages/popup/PopupApp";
 export {
   OptionsApp,
   type OptionsAppProps,
-  OptionsAppDefault,
+  default as OptionsAppDefault,
 } from "./pages/options/OptionsApp";
 export { RuleEditor } from "./pages/options/RuleEditor";
 export { Replay } from "./pages/options/Replay";
