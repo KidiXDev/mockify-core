@@ -15,7 +15,6 @@
     "paths": {
       "@mockify-core/*": ["./src/*"]
     },
-    "baseUrl": ".",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
